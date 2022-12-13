@@ -9,3 +9,8 @@ services:
     volumes:
       - ./src:/src
     working_dir: "/src"
+    tty: true
+    command: >
+        bash -c "npm install &&
+        npm install nodemon -g &&
+        nodemon src/server.js"
